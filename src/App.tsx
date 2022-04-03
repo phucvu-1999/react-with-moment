@@ -4,17 +4,25 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  let m = moment();
+  const m = moment();
 
-  // current Date and time
+  console.log(m.toString());
 
-  // Create from ISO 8601 string
-  m = moment("2022-04-03T23:24:12.000");
+  //getting units
+  console.log("quater gotten from moment: ", m.get("minutes"));
 
-  // Using format
-  m = moment("03/04/2022 10:29PM", "DD/MM/YYYY h/mmA");
-  console.log("moment in string: ", m.toString());
-  console.log("moment in ISOS string: ", m.toISOString());
+  //setting units
+  m.minutes(59);
+  m.hour(1);
+  m.second(12);
+  m.set("date", 8);
+  console.log(m.toString());
+
+  const differentMoment = moment("2022-4-6");
+  console.log(
+    "maximum between 2 moment: ",
+    moment.max(m, differentMoment).toString()
+  );
 
   return (
     <div className="App">
