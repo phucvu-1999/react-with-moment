@@ -24,6 +24,8 @@ function App() {
     moment.max(m, differentMoment).toString()
   );
 
+  console.log(moment().add(1, "M").format("YYYY/MM/DD"));
+
   return (
     <div className="App">
       <header className="App-header">
