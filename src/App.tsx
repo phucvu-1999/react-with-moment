@@ -6,14 +6,8 @@ import "./App.css";
 function App() {
   const m = moment();
 
-  // GETTING UNITS
-
-  // SETTING UNITS
-
-  // MAX AND MIN FUNCTION
-  const differentDate = moment("2022/04/30");
-
-  console.log(moment.min(m, differentDate).toString());
+  console.log(`Original moment: ${m.toString()}`);
+  console.log(`Modified moment: ${m.endOf("month").toString()}`);
 
   return (
     <div className="App">
