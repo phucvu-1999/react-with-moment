@@ -4,15 +4,16 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  let m = moment();
+  const m = moment();
 
-  m = moment("2021-04-19T23:23:00.00+04:00");
+  // GETTING UNITS
 
-  // formart
-  m = moment("07/01/1999 4:30PM", "DD/MM/YYYY h:mmP");
+  // SETTING UNITS
 
-  console.log("toString method: ", m.toString());
-  console.log("toIOString method: ", m.toISOString());
+  // MAX AND MIN FUNCTION
+  const differentDate = moment("2022/04/30");
+
+  console.log(moment.min(m, differentDate).toString());
 
   return (
     <div className="App">
