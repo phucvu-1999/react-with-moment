@@ -5,9 +5,10 @@ import "./App.css";
 
 function App() {
   const m = moment();
+  const m2 = moment("2022/04/12");
 
-  console.log(`Original moment: ${m.toString()}`);
-  console.log(`Modified moment: ${m.endOf("month").toString()}`);
+  const diff = m.diff(m2, "weeks", true);
+  console.log("diff: ", diff);
 
   return (
     <div className="App">
