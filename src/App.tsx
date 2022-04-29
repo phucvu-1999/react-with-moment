@@ -4,27 +4,15 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  const m = moment();
+  let m = moment();
 
-  console.log(m.toString());
+  m = moment("2021-04-19T23:23:00.00+04:00");
 
-  //getting units
-  console.log("quater gotten from moment: ", m.get("minutes"));
+  // formart
+  m = moment("07/01/1999 4:30PM", "DD/MM/YYYY h:mmP");
 
-  //setting units
-  m.minutes(59);
-  m.hour(1);
-  m.second(12);
-  m.set("date", 8);
-  console.log(m.toString());
-
-  const differentMoment = moment("2022-4-6");
-  console.log(
-    "maximum between 2 moment: ",
-    moment.max(m, differentMoment).toString()
-  );
-
-  console.log(moment().add(1, "M").format("YYYY/MM/DD"));
+  console.log("toString method: ", m.toString());
+  console.log("toIOString method: ", m.toISOString());
 
   return (
     <div className="App">
